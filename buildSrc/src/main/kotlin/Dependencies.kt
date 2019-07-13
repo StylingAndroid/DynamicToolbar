@@ -1,4 +1,4 @@
-const val kotlinVersion = "1.3.40"
+const val kotlinVersion = "1.3.41"
 
 object BuildPlugins {
     object Version {
@@ -22,10 +22,10 @@ object AndroidSdk {
 
 object Libraries {
     private object Versions {
-        const val appCompat = "1.1.0-beta01"
+        const val appCompat = "1.1.0-rc01"
         const val ktx = "1.2.0-alpha02"
         const val constraintLayout = "2.0.0-beta2"
-        const val recyclerview = "1.1.0-alpha06"
+        const val recyclerview = "1.1.0-beta01"
     }
 
     const val kotlinStdLib = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlinVersion"
