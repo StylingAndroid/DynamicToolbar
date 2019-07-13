@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layoutDescription="@xml/collapsing_toolbar"
+    tools:context=".MainActivity">
+
+    <View
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/colorPrimary" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/event_name"
+        android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Subtitle.Inverse" />
+
+    <TextView
+        android:id="@+id/score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/score"
+        android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title.Inverse" />
+
+    <ImageView
+        android:id="@+id/man_city_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@null"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:src="@drawable/man_city" />
+
+    <TextView
+        android:id="@+id/man_city"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/man_city"
+        android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title.Inverse"
+        app:layout_constraintBaseline_toBaselineOf="@id/score"
+        app:layout_constraintEnd_toStartOf="@id/man_city_logo"/>
+
+    <ImageView
+        android:id="@+id/watford_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@null"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:src="@drawable/watford" />
+
+    <TextView
+        android:id="@+id/watford"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/watford"
+        android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title.Inverse"
+        app:layout_constraintBaseline_toBaselineOf="@id/score"
+        app:layout_constraintStart_toEndOf="@id/watford_logo"/>
+
+    <View
+        android:id="@+id/toolbar_extension"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/bubble"
+        android:backgroundTint="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="@id/time"
+        app:layout_constraintStart_toStartOf="@id/time" />
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:text="@string/time"
+        android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Subtitle.Inverse" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_extension" />
+</androidx.constraintlayout.motion.widget.MotionLayout>

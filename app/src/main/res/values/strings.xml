@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Dynamic Toolbar</string>
+    <string name="score">0 – 7</string>
+    <string name="man_city">Man. City</string>
+    <string name="watford">Watford</string>
+    <string name="event_name">F.A. Cup Final 2019</string>
+    <string name="time">89:59</string>
+</resources>
